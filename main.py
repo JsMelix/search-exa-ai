@@ -11,4 +11,7 @@ response = exa.search(
   include_domains=['https://www.tiktok.com'],
 )
 
-print(response)
+for result in response.results:
+  print(f'Title: {result.title}')
+  print(f'URL: {result.url}')
+  print()
